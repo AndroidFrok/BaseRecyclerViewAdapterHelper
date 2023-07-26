@@ -6,7 +6,7 @@ plugins {
     id("com.android.library")
     kotlin("android")
     `maven-publish`
-    signing
+//    signing
 }
 
 val versionName = "4.0.0-beta14"
@@ -72,7 +72,7 @@ val localProperties: File = project.rootProject.file("local.properties")
 
 if (localProperties.exists()) {
     println("Found secret props file, loading props")
-    val properties = Properties()
+    /*val properties = Properties()
 
     InputStreamReader(FileInputStream(localProperties), Charsets.UTF_8).use { reader ->
         properties.load(reader)
@@ -81,7 +81,7 @@ if (localProperties.exists()) {
     signingPassword = properties.getProperty("signing.password")
     secretKeyRingFile = properties.getProperty("signing.secretKeyRingFile")
     ossrhUsername = properties.getProperty("ossrhUsername")
-    ossrhPassword = properties.getProperty("ossrhPassword")
+    ossrhPassword = properties.getProperty("ossrhPassword")*/
 
 } else {
     println("No props file, loading env vars")
@@ -153,7 +153,7 @@ gradle.taskGraph.whenReady {
     }
 }
 
-signing {
+/*signing {
     sign(publishing.publications)
-}
+}*/
 
