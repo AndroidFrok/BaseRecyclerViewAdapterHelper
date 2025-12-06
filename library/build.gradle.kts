@@ -71,7 +71,7 @@ var ossrhPassword = "" //sonatype密码
 
 val localProperties: File = project.rootProject.file("local.properties")
 
-if (localProperties.exists()) {
+/*if (localProperties.exists()) {
     println("Found secret props file, loading props")
     val properties = Properties()
 
@@ -86,7 +86,7 @@ if (localProperties.exists()) {
 
 } else {
     println("No props file, loading env vars")
-}
+}*/
 
 afterEvaluate {
 
